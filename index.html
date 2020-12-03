@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Micro-Frontends</title>
+    <style>
+        body {
+            margin: 0 !important;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        .column {
+            display: flex;
+            flex: 1;
+            padding: 10px;
+        }
+
+        .micro-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        .micro-container react-app, angular-app, vue-app {
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+
+    <link href="http://localhost:3002/static/css/main.ad68393a.chunk.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <div class="micro-container">
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="micro-container">
+                    <react-app />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="micro-container">
+                    <angular-app />
+                </div>
+            </div>
+            <div class="column">
+                <div class="micro-container">
+                    <vue-app />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Angular -->
+    <script src="http://localhost:3001/angular-application/runtime.js"></script>
+    <script src="http://localhost:3001/angular-application/polyfills.js"></script>
+    <script src="http://localhost:3001/angular-application/vendor.js"></script>
+    <script src="http://localhost:3001/angular-application/main.js"></script>
+
+    <!-- React -->
+    <script src="http://localhost:3002/static/js/2.fac27827.chunk.js"></script>
+    <script src="http://localhost:3002/static/js/main.da079352.chunk.js"></script>
+    <script src="http://localhost:3002/static/js/runtime-main.1c8caf9a.js"></script>
+    
+    <!-- Vue -->
+
+</body>
+</html>
